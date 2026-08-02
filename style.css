@@ -1,0 +1,193 @@
+ /* ==========================================================================
+           🌌 GLOBAL RESET & COSMIC BACKGROUND
+           ========================================================================== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            /* Switched to a hyper-modern sans-serif that looks amazing in screenshots */
+            font-family: 'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif;
+        }
+
+        body {
+            /* Rich, deep dark-space background gradient */
+            background: linear-gradient(135deg, #0f172a 0%, #020617 100%);
+            color: #f8fafc;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* ==========================================================================
+           🧱 STRUCTURAL FLEXBOX ENGINE
+           ========================================================================== */
+        .hero {
+            padding: 80px 5%;
+            width: 100%;
+        }
+
+        .hero-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 4rem;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+            min-height: 75vh;
+        }
+
+        .hero-content {
+            flex: 1;
+            flex-basis: 450px;
+            display: flex;
+            flex-direction: column;
+            gap: 1.8rem;
+        }
+
+        .hero-image-side {
+            flex: 1;
+            flex-basis: 450px;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* ==========================================================================
+           🔠 CYBERPUNK TYPOGRAPHY DESIGN
+           ========================================================================== */
+        .hero-content h1 {
+            font-size: 3.4rem;
+            font-weight: 800;
+            line-height: 1.15;
+            letter-spacing: -0.02em;
+            color: #ffffff;
+        }
+
+        /* High-contrast electric gradient for your keyword focuses */
+        .hero-content h1 span {
+            background: linear-gradient(45deg, #00ff9d, #06b6d4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Clean muted silver description for dark mode layout */
+        .hero-dscrp {
+            line-height: 1.7;
+            font-size: 1.2rem;
+            font-weight: 400;
+            color: #94a3b8; 
+            max-width: 500px;
+        }
+
+        /* ==========================================================================
+           🎮 GLOWING ACTION CALLS (CTA)
+           ========================================================================== */
+        .hero-cta-group {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .hero-cta-group a {
+            text-decoration: none;
+            padding: 16px 32px;
+            border-radius: 10px;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* Neon Mint Primary Button */
+        .main-btn {
+            background: linear-gradient(45deg, #00ff9d, #00cd6b);
+            color: #020617;
+            box-shadow: 0 4px 20px rgba(0, 255, 157, 0.25);
+        }
+
+        .main-btn:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 30px rgba(0, 255, 157, 0.45);
+            background: linear-gradient(45deg, #00cd6b, #00ff9d);
+        }
+
+        /* Electric Cyan Secondary Button */
+        .sub-btn {
+            background: transparent;
+            color: #06b6d4;
+            border: 2px solid #06b6d4;
+            box-shadow: 0 4px 15px rgba(6, 182, 212, 0.1);
+        }
+
+        .sub-btn:hover {
+            transform: translateY(-4px);
+            background: rgba(6, 182, 212, 0.1);
+            box-shadow: 0 8px 25px rgba(6, 182, 212, 0.3);
+            color: #ffffff;
+            border-color: #ffffff;
+        }
+
+        /* ==========================================================================
+           📸 IMAGE FLUID ASSET CONTROLLER
+           ========================================================================== */
+        .hero-image-side img {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* ==========================================================================
+           ✨ THE LIVE BOUNCE ENGINE (Upgraded with Custom Neon Shadow Glow)
+           ========================================================================== */
+        .animation-bounce {
+            animation-name: cyber-float;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+        }
+
+        @keyframes cyber-float {
+            0% {
+                transform: translateY(0);
+                /* Deep dark soft shadow when resting */
+                filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.7));
+            }
+
+            50% {
+                transform: translateY(-15px);
+                /* Vivid Cyan glow effect that fires up when the card floats */
+                filter: drop-shadow(0 25px 35px rgba(6, 182, 212, 0.35));
+            }
+
+            100% {
+                transform: translateY(0);
+                filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.7));
+            }
+        }
+
+        /* ==========================================================================
+           📱 SMARTPHONE BREAKPOINT RESPONSIVENESS
+           ========================================================================== */
+        @media (max-width: 768px) {
+            .hero {
+                padding: 40px 6%;
+            }
+            
+            .hero-container {
+                flex-direction: column;
+                text-align: center;
+                gap: 3.5rem;
+            }
+
+            .hero-content {
+                align-items: center;
+            }
+            
+            .hero-content h1 {
+                font-size: 2.4rem;
+            }
+            
+            .hero-cta-group {
+                width: 100%;
+                justify-content: center;
+            }
+        }
